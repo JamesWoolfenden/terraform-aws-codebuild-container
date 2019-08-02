@@ -1,6 +1,6 @@
 module "codebuild" {
   source                      = "jameswoolfenden/codebuild/aws"
-  version                     = "0.2.61"
+  version                     = "0.2.62"
   common_tags                 = var.common_tags
   description                 = var.description
   environment_privileged_mode = true
