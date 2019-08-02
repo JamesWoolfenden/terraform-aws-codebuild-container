@@ -1,0 +1,17 @@
+# Cache objects
+packer_cache/
+
+# For built boxes
+*.box
+personal*
+aws-230-300-2*
+*.orig
+.terraform/
+output/
+package-lock.json
+node_modules/
+*.backup
+*.zip
+src/
+*.tfstate
+.idea/
