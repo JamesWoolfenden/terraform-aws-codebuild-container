@@ -17,6 +17,21 @@ Makes a codecommit repo, a codebuild build and ECR, to builds a container using 
 Once provisioned, you'll need to add this code to the newly created repo to get it to build the container.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|:----:|:-----:|:-----:|
+| common\_tags |  | map | n/a | yes |
+| description | Description of build project | string | n/a | yes |
+| name | The name of the registry, repository and build | string | n/a | yes |
+| otherawsaccount |  | string | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| artifact\_bucket |  |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
