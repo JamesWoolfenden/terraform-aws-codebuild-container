@@ -1,8 +1,8 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-codebuild-container [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-codebuild.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codebuild) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codebuild.svg)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest)
+# terraform-aws-codebuild-container [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codebuild-container.svg)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest)
 
-Terraform module to provision an AWS [`codebuild`](https://aws.amazon.com/codebuild/) CI/CD system.
+Terraform module to provision a container pipeline.
 
 ---
 
@@ -10,7 +10,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-Makes a codecommit repo, a codebuild build and ECR, to builds a container using codebuild and stored in ECR.
+Makes a codecommit repo, a codebuild build and ECR, to builds a container using codebuild and and stores them in ECR.
 
 ## to do
 
@@ -44,13 +44,13 @@ Check out these related projects.
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-codebuild/issues).
+File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-codebuild-container/issues).
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-codebuild/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-codebuild-container/issues) to report any bugs or file feature requests.
 
 ## Copyrights
 
@@ -92,8 +92,8 @@ under the License.
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/Slalom
 
-[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-codebuild&url=https://github.com/jameswoolfenden/terraform-aws-codebuild
-[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-codebuild&url=https://github.com/jameswoolfenden/terraform-aws-codebuild
-[share_reddit]: https://reddit.com/submit/?url=https://github.com/jameswoolfenden/terraform-aws-codebuild
-[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/jameswoolfenden/terraform-aws-codebuild
-[share_email]: mailto:?subject=terraform-aws-codebuild&body=https://github.com/jameswoolfenden/terraform-aws-codebuild
+[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-codebuild-container&url=https://github.com/jameswoolfenden/terraform-aws-codebuild
+[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-codebuild-container&url=https://github.com/jameswoolfenden/terraform-aws-codebuild
+[share_reddit]: https://reddit.com/submit/?url=https://github.com/jameswoolfenden/terraform-aws-codebuild-container
+[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/jameswoolfenden/terraform-aws-codebuild-container
+[share_email]: mailto:?subject=terraform-aws-codebuild&body=https://github.com/jameswoolfenden/terraform-aws-codebuild-container
