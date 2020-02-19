@@ -1,5 +1,7 @@
 ---
 # yamllint disable rule:line-length
+default_language_version:
+  python: python3
 repos:
   - repo: git://github.com/pre-commit/pre-commit-hooks
     rev: v2.5.0
