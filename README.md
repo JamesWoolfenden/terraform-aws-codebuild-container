@@ -1,9 +1,9 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-codebuild-container 
+# terraform-aws-codebuild-container
 
-[![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container) 
-[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codebuild-container.svg)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest) 
+[![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codebuild-container.svg)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 Terraform module to provision a container pipeline.
@@ -21,21 +21,6 @@ Makes a codecommit repo, a codebuild build and ECR, to builds a container using 
 Once provisioned, you'll need to add this code to the newly created repo to get it to build the container.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| common\_tags |  | map | n/a | yes |
-| description | Description of build project | string | n/a | yes |
-| name | The name of the registry, repository and build | string | n/a | yes |
-| otherawsaccount |  | string | n/a | yes |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| artifact\_bucket |  |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
