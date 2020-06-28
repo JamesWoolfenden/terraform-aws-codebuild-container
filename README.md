@@ -1,6 +1,10 @@
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-codebuild-container [![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codebuild-container.svg)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+# terraform-aws-codebuild-container 
+
+[![Build Status](https://api.travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codebuild-container) 
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codebuild-container.svg)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest) 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 Terraform module to provision a container pipeline.
 
