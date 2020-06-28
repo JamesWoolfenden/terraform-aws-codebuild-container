@@ -1,10 +1,19 @@
 module "codebuild" {
-  source                      = "jameswoolfenden/codebuild/aws"
-  version                     = "0.2.62"
-  common_tags                 = var.common_tags
-  description                 = var.description
-  environment_privileged_mode = true
-  name                        = var.name
-  source_type                 = "CODECOMMIT"
-  source_location             = module.codecommit.clone_url_https
+  source                 = "jameswoolfenden/codebuild/aws"
+  version                = "v0.2.102"
+  common_tags            = var.common_tags
+  description            = var.description
+  name                   = var.name
+  force_artifact_destroy = var.force_artifact_destroy
+  projectroot            = var.projectroot
+  sourcecode             = local.sourcecode
+}
+
+
+locals {
+  sourcecode = {
+    type      = "CODECOMMIT"
+    location  = ""
+    buildspec = ""
+  }
 }

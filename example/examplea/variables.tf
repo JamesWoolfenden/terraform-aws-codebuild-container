@@ -16,3 +16,21 @@ variable "common_tags" {
 variable "otherawsaccount" {
   type = string
 }
+
+variable "projectroot" {
+  type        = string
+  description = "The root project name"
+}
+
+variable "force_artifact_destroy" {
+  type = string
+}
+
+variable "sourcecode" {
+  type = map
+  default = {
+    type      = "CODECOMMIT"
+    location  = ""
+    buildspec = ""
+  }
+}
