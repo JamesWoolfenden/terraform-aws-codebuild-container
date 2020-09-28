@@ -20,7 +20,6 @@ Makes a codecommit repo, a codebuild build and ECR, to builds a container using 
 Once provisioned, you'll need to add this code to the newly created repo to get it to build the container.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 No requirements.
@@ -28,26 +27,26 @@ No requirements.
 ## Providers
 
 | Name | Version |
-| ---- | ------- |
-| aws  | n/a     |
+|------|---------|
+| aws | n/a |
 
 ## Inputs
 
-| Name                   | Description                                    | Type     | Default                                                                             | Required |
-| ---------------------- | ---------------------------------------------- | -------- | ----------------------------------------------------------------------------------- | :------: |
-| common_tags            | n/a                                            | `map`    | n/a                                                                                 |   yes    |
-| description            | Description of build project                   | `string` | n/a                                                                                 |   yes    |
-| force_artifact_destroy | n/a                                            | `string` | n/a                                                                                 |   yes    |
-| name                   | The name of the registry, repository and build | `string` | n/a                                                                                 |   yes    |
-| otherawsaccount        | n/a                                            | `string` | n/a                                                                                 |   yes    |
-| projectroot            | The root project name                          | `string` | n/a                                                                                 |   yes    |
-| sourcecode             | n/a                                            | `map`    | <pre>{<br> "buildspec": "",<br> "location": "",<br> "type": "CODECOMMIT"<br>}</pre> |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| common\_tags | n/a | `map` | n/a | yes |
+| description | Description of build project | `string` | n/a | yes |
+| force\_artifact\_destroy | n/a | `string` | n/a | yes |
+| name | The name of the registry, repository and build | `string` | n/a | yes |
+| otherawsaccount | n/a | `string` | n/a | yes |
+| projectroot | The root project name | `string` | n/a | yes |
+| sourcecode | n/a | `map` | <pre>{<br>  "buildspec": "",<br>  "location": "",<br>  "type": "CODECOMMIT"<br>}</pre> | no |
 
 ## Outputs
 
-| Name            | Description |
-| --------------- | ----------- |
-| artifact_bucket | n/a         |
+| Name | Description |
+|------|-------------|
+| artifact\_bucket | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
