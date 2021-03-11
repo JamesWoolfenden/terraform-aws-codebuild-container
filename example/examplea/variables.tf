@@ -10,7 +10,7 @@ variable "name" {
 }
 
 variable "common_tags" {
-  type = map
+  type = map(any)
 }
 
 variable "otherawsaccount" {
@@ -27,7 +27,7 @@ variable "force_artifact_destroy" {
 }
 
 variable "sourcecode" {
-  type = map
+  type = map(any)
   default = {
     type      = "CODECOMMIT"
     location  = ""

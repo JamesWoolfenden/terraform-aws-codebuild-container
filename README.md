@@ -34,24 +34,42 @@ No requirements.
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| codebuild | jameswoolfenden/codebuild/aws | v0.2.102 |
+| codecommit | jameswoolfenden/codecommit/aws | 0.3.4 |
+| ecr | jameswoolfenden/ecr/aws | 0.2.20 |
+
+## Resources
+
+| Name |
+|------|
+| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) |
+| [aws_iam_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) |
+| [aws_iam_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) |
+| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_role) |
+| [aws_iam_role_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) |
+| [aws_region](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| common\_tags | n/a | `map` | n/a | yes |
+| common\_tags | n/a | `map(any)` | n/a | yes |
 | description | Description of build project | `string` | n/a | yes |
 | force\_artifact\_destroy | n/a | `string` | n/a | yes |
 | name | The name of the registry, repository and build | `string` | n/a | yes |
 | otherawsaccount | n/a | `string` | n/a | yes |
 | projectroot | The root project name | `string` | n/a | yes |
-| sourcecode | n/a | `map` | <pre>{<br>  "buildspec": "",<br>  "location": "",<br>  "type": "CODECOMMIT"<br>}</pre> | no |
+| sourcecode | n/a | `map(any)` | <pre>{<br>  "buildspec": "",<br>  "location": "",<br>  "type": "CODECOMMIT"<br>}</pre> | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | artifact\_bucket | n/a |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
