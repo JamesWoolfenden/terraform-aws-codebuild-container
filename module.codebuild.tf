@@ -1,6 +1,6 @@
 module "codebuild" {
   source                 = "jameswoolfenden/codebuild/aws"
-  version                = "v0.2.102"
+  version                = "v0.2.121"
   common_tags            = var.common_tags
   description            = var.description
   name                   = var.name

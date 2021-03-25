@@ -38,8 +38,8 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| codebuild | jameswoolfenden/codebuild/aws | v0.2.102 |
-| codecommit | jameswoolfenden/codecommit/aws | 0.3.4 |
+| codebuild | jameswoolfenden/codebuild/aws | v0.2.121 |
+| codecommit | jameswoolfenden/codecommit/aws | 0.3.10 |
 | ecr | jameswoolfenden/ecr/aws | 0.2.20 |
 
 ## Resources
