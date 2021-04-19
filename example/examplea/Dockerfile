@@ -1,3 +1,6 @@
+# checkov:skip=CKV_DOCKER_2:demo code
+# checkov:skip=CKV_DOCKER_2:demo code
+
 FROM hashicorp/terraform
 
 RUN apk update && \
