@@ -38,7 +38,7 @@ No requirements.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_codebuild"></a> [codebuild](#module\_codebuild) | jameswoolfenden/codebuild/aws | v0.2.123 |
+| <a name="module_codebuild"></a> [codebuild](#module\_codebuild) | jameswoolfenden/codebuild/aws | v0.2.135 |
 | <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | jameswoolfenden/codecommit/aws | 0.3.10 |
 | <a name="module_ecr"></a> [ecr](#module\_ecr) | jameswoolfenden/ecr/aws | 0.2.60 |
 
@@ -60,6 +60,7 @@ No requirements.
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(any)` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Description of build project | `string` | n/a | yes |
 | <a name="input_force_artifact_destroy"></a> [force\_artifact\_destroy](#input\_force\_artifact\_destroy) | n/a | `string` | n/a | yes |
+| <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | KMS key id | `string` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | The name of the registry, repository and build | `string` | n/a | yes |
 | <a name="input_otherawsaccount"></a> [otherawsaccount](#input\_otherawsaccount) | n/a | `string` | n/a | yes |
 | <a name="input_projectroot"></a> [projectroot](#input\_projectroot) | The root project name | `string` | n/a | yes |

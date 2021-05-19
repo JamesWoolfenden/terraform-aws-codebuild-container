@@ -1,4 +1,5 @@
 # checkov:skip=CKV_DOCKER_2:demo code
+# checkov:skip=CKV_DOCKER_3:demo code
 # checkov:skip=CKV_DOCKER_7:demo code
 
 FROM hashicorp/terraform
