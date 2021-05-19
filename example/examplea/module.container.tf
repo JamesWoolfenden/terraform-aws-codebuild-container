@@ -7,4 +7,5 @@ module "container" {
   sourcecode             = var.sourcecode
   force_artifact_destroy = "true"
   projectroot            = "example"
+  kms_key                = aws_kms_key.codebuild.key_id
 }
