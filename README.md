@@ -24,53 +24,55 @@ Makes a codecommit repo, a codebuild build and ECR, to builds a container using 
 Once provisioned, you'll need to add this code to the newly created repo to get it to build the container.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 No requirements.
 
 ## Providers
 
-| Name | Version |
-|------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| Name                                             | Version |
+| ------------------------------------------------ | ------- |
+| <a name="provider_aws"></a> [aws](#provider_aws) | n/a     |
 
 ## Modules
 
-| Name | Source | Version |
-|------|--------|---------|
-| <a name="module_codebuild"></a> [codebuild](#module\_codebuild) | jameswoolfenden/codebuild/aws | v0.2.135 |
-| <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | jameswoolfenden/codecommit/aws | 0.3.10 |
-| <a name="module_ecr"></a> [ecr](#module\_ecr) | jameswoolfenden/ecr/aws | 0.2.60 |
+| Name                                                              | Source                         | Version  |
+| ----------------------------------------------------------------- | ------------------------------ | -------- |
+| <a name="module_codebuild"></a> [codebuild](#module_codebuild)    | jameswoolfenden/codebuild/aws  | v0.2.135 |
+| <a name="module_codecommit"></a> [codecommit](#module_codecommit) | jameswoolfenden/codecommit/aws | 0.3.10   |
+| <a name="module_ecr"></a> [ecr](#module_ecr)                      | jameswoolfenden/ecr/aws        | 0.2.60   |
 
 ## Resources
 
-| Name | Type |
-|------|------|
-| [aws_iam_policy.additionalneeds](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
-| [aws_iam_role_policy_attachment.lex](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
-| [aws_iam_policy_document.allowlocals](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
-| [aws_iam_role.codebuild](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_role) | data source |
-| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
+| Name                                                                                                                                         | Type        |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [aws_iam_policy.additionalneeds](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy)                     | resource    |
+| [aws_iam_role_policy_attachment.lex](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource    |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)                | data source |
+| [aws_iam_policy_document.allowlocals](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document)    | data source |
+| [aws_iam_role.codebuild](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_role)                            | data source |
+| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region)                                  | data source |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(any)` | n/a | yes |
-| <a name="input_description"></a> [description](#input\_description) | Description of build project | `string` | n/a | yes |
-| <a name="input_force_artifact_destroy"></a> [force\_artifact\_destroy](#input\_force\_artifact\_destroy) | n/a | `string` | n/a | yes |
-| <a name="input_kms_key"></a> [kms\_key](#input\_kms\_key) | KMS key id | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | The name of the registry, repository and build | `string` | n/a | yes |
-| <a name="input_otherawsaccount"></a> [otherawsaccount](#input\_otherawsaccount) | n/a | `string` | n/a | yes |
-| <a name="input_projectroot"></a> [projectroot](#input\_projectroot) | The root project name | `string` | n/a | yes |
-| <a name="input_sourcecode"></a> [sourcecode](#input\_sourcecode) | n/a | `map(any)` | <pre>{<br>  "buildspec": "",<br>  "location": "",<br>  "type": "CODECOMMIT"<br>}</pre> | no |
+| Name                                                                                                | Description                                    | Type       | Default                                                                             | Required |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------- | ----------------------------------------------------------------------------------- | :------: |
+| <a name="input_common_tags"></a> [common_tags](#input_common_tags)                                  | n/a                                            | `map(any)` | n/a                                                                                 |   yes    |
+| <a name="input_description"></a> [description](#input_description)                                  | Description of build project                   | `string`   | n/a                                                                                 |   yes    |
+| <a name="input_force_artifact_destroy"></a> [force_artifact_destroy](#input_force_artifact_destroy) | n/a                                            | `string`   | n/a                                                                                 |   yes    |
+| <a name="input_kms_key"></a> [kms_key](#input_kms_key)                                              | KMS key id                                     | `string`   | n/a                                                                                 |   yes    |
+| <a name="input_name"></a> [name](#input_name)                                                       | The name of the registry, repository and build | `string`   | n/a                                                                                 |   yes    |
+| <a name="input_otherawsaccount"></a> [otherawsaccount](#input_otherawsaccount)                      | n/a                                            | `string`   | n/a                                                                                 |   yes    |
+| <a name="input_projectroot"></a> [projectroot](#input_projectroot)                                  | The root project name                          | `string`   | n/a                                                                                 |   yes    |
+| <a name="input_sourcecode"></a> [sourcecode](#input_sourcecode)                                     | n/a                                            | `map(any)` | <pre>{<br> "buildspec": "",<br> "location": "",<br> "type": "CODECOMMIT"<br>}</pre> |    no    |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_artifact_bucket"></a> [artifact\_bucket](#output\_artifact\_bucket) | n/a |
+| Name                                                                             | Description |
+| -------------------------------------------------------------------------------- | ----------- |
+| <a name="output_artifact_bucket"></a> [artifact_bucket](#output_artifact_bucket) | n/a         |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Related Projects
@@ -93,7 +95,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2019-2022 James Woolfenden
 
 ## License
 
