@@ -34,3 +34,8 @@ variable "sourcecode" {
     buildspec = ""
   }
 }
+
+variable "approver_role" {
+  type        = string
+  description = "Arn of approver role"
+}

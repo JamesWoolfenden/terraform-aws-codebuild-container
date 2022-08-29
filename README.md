@@ -32,14 +32,14 @@ No requirements.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.28.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_codebuild"></a> [codebuild](#module\_codebuild) | jameswoolfenden/codebuild/aws | v0.3.1 |
-| <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | jameswoolfenden/codecommit/aws | 0.3.58 |
+| <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | jameswoolfenden/codecommit/aws | v0.3.59 |
 | <a name="module_ecr"></a> [ecr](#module\_ecr) | jameswoolfenden/ecr/aws | 0.2.60 |
 
 ## Resources
@@ -57,6 +57,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_approver_role"></a> [approver\_role](#input\_approver\_role) | Arn of approver role | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(any)` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Description of build project | `string` | n/a | yes |
 | <a name="input_force_artifact_destroy"></a> [force\_artifact\_destroy](#input\_force\_artifact\_destroy) | n/a | `string` | n/a | yes |

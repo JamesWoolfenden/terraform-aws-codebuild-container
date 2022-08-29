@@ -8,4 +8,5 @@ module "container" {
   force_artifact_destroy = "true"
   projectroot            = "example"
   kms_key                = aws_kms_key.codebuild.key_id
+  approver_role          = "arn:aws:iam::680235478471:role/approvers"
 }
