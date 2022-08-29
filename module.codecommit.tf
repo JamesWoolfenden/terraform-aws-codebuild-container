@@ -1,5 +1,5 @@
 module "codecommit" {
   source          = "jameswoolfenden/codecommit/aws"
-  version         = "0.3.58"
+  version         = "v0.3.59"
   repository_name = var.name
 }
