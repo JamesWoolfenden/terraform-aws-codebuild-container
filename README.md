@@ -99,18 +99,45 @@ The Policy required is:
             "Sid": "VisualEditor1",
             "Effect": "Allow",
             "Action": [
+                "codebuild:BatchGetProjects",
+                "codebuild:CreateProject",
+                "codebuild:DeleteProject",
+                "codebuild:UpdateProject"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "codecommit:CreateRepository",
+                "codecommit:DeleteRepository",
+                "codecommit:GetRepository",
+                "codecommit:ListBranches",
+                "codecommit:ListTagsForResource",
+                "codecommit:UpdateRepositoryDescription"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
                 "ecr:CreateRepository",
+                "ecr:DeleteLifecyclePolicy",
                 "ecr:DeleteRepository",
                 "ecr:DescribeRepositories",
+                "ecr:GetLifecyclePolicy",
                 "ecr:ListTagsForResource",
                 "ecr:PutImageScanningConfiguration",
+                "ecr:PutLifecyclePolicy",
                 "ecr:TagResource",
                 "ecr:UntagResource"
             ],
             "Resource": "*"
         },
         {
-            "Sid": "VisualEditor2",
+            "Sid": "VisualEditor4",
             "Effect": "Allow",
             "Action": [
                 "events:DeleteRule",
@@ -124,7 +151,7 @@ The Policy required is:
             "Resource": "*"
         },
         {
-            "Sid": "VisualEditor3",
+            "Sid": "VisualEditor5",
             "Effect": "Allow",
             "Action": [
                 "iam:AttachGroupPolicy",
@@ -148,13 +175,14 @@ The Policy required is:
                 "iam:ListInstanceProfilesForRole",
                 "iam:ListPolicyVersions",
                 "iam:ListRolePolicies",
+                "iam:PassRole",
                 "iam:PutRolePolicy",
                 "iam:TagRole"
             ],
             "Resource": "*"
         },
         {
-            "Sid": "VisualEditor4",
+            "Sid": "VisualEditor6",
             "Effect": "Allow",
             "Action": [
                 "kms:CreateGrant",
@@ -170,7 +198,7 @@ The Policy required is:
             "Resource": "*"
         },
         {
-            "Sid": "VisualEditor5",
+            "Sid": "VisualEditor7",
             "Effect": "Allow",
             "Action": [
                 "s3:CreateBucket",
@@ -201,7 +229,7 @@ The Policy required is:
             "Resource": "*"
         },
         {
-            "Sid": "VisualEditor6",
+            "Sid": "VisualEditor8",
             "Effect": "Allow",
             "Action": [
                 "ssm:AddTagsToResource",
