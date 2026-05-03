@@ -1,6 +1,5 @@
 module "codebuild" {
-  source                 = "jameswoolfenden/codebuild/aws"
-  version                = "v0.3.1"
+  source = "git::https://github.com/jameswoolfenden/terraform-aws-codebuild.git?ref=ca8c589dc7b1f2a1c3877c0cd86a54c161819b80" #v0.3.1
   common_tags            = var.common_tags
   description            = var.description
   name                   = var.name
