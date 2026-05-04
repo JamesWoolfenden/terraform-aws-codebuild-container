@@ -92,37 +92,45 @@ resource "aws_iam_policy" "terraform_pike" {
             "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-                "SNS:CreateTopic",
-                "SNS:DeleteTopic",
-                "SNS:GetTopicAttributes",
-                "SNS:ListTagsForResource",
-                "SNS:SetTopicAttributes"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": [
                 "codebuild:BatchGetProjects",
                 "codebuild:CreateProject",
                 "codebuild:DeleteProject",
                 "codebuild:UpdateProject"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "codecommit:AssociateApprovalRuleTemplateWithRepository",
+                "codecommit:CreateApprovalRuleTemplate",
+                "codecommit:CreateRepository",
+                "codecommit:DeleteApprovalRuleTemplate",
+                "codecommit:DeleteRepository",
+                "codecommit:DisassociateApprovalRuleTemplateFromRepository",
+                "codecommit:GetApprovalRuleTemplate",
+                "codecommit:GetRepository",
+                "codecommit:ListBranches",
+                "codecommit:ListRepositoriesForApprovalRuleTemplate",
+                "codecommit:ListTagsForResource",
+                "codecommit:UpdateRepositoryDescription"
+            ],
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor2",
             "Effect": "Allow",
             "Action": [
-                "codecommit:CreateRepository",
-                "codecommit:DeleteRepository",
-                "codecommit:GetRepository",
-                "codecommit:ListBranches",
-                "codecommit:ListTagsForResource",
-                "codecommit:UpdateRepositoryDescription"
+                "ec2:DescribeAccountAttributes"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor3",
@@ -131,15 +139,20 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ecr:CreateRepository",
                 "ecr:DeleteLifecyclePolicy",
                 "ecr:DeleteRepository",
+                "ecr:DeleteRepositoryPolicy",
                 "ecr:DescribeRepositories",
                 "ecr:GetLifecyclePolicy",
+                "ecr:GetRepositoryPolicy",
                 "ecr:ListTagsForResource",
                 "ecr:PutImageScanningConfiguration",
                 "ecr:PutLifecyclePolicy",
+                "ecr:SetRepositoryPolicy",
                 "ecr:TagResource",
                 "ecr:UntagResource"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor4",
@@ -153,7 +166,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "events:PutTargets",
                 "events:RemoveTargets"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor5",
@@ -179,9 +194,12 @@ resource "aws_iam_policy" "terraform_pike" {
                 "iam:ListRolePolicies",
                 "iam:PassRole",
                 "iam:PutRolePolicy",
-                "iam:TagRole"
+                "iam:TagRole",
+                "iam:UntagRole"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor6",
@@ -189,9 +207,12 @@ resource "aws_iam_policy" "terraform_pike" {
             "Action": [
                 "kms:CreateGrant",
                 "kms:Decrypt",
-                "kms:DescribeKey"
+                "kms:DescribeKey",
+                "kms:RetireGrant"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor7",
@@ -218,14 +239,32 @@ resource "aws_iam_policy" "terraform_pike" {
                 "s3:ListAllMyBuckets",
                 "s3:ListBucket",
                 "s3:PutBucketAcl",
+                "s3:PutBucketLogging",
                 "s3:PutBucketPublicAccessBlock",
                 "s3:PutBucketVersioning",
-                "s3:PutEncryptionConfiguration"
+                "s3:PutEncryptionConfiguration",
+                "s3:PutLifecycleConfiguration"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         },
         {
             "Sid": "VisualEditor8",
+            "Effect": "Allow",
+            "Action": [
+                "sns:CreateTopic",
+                "sns:DeleteTopic",
+                "sns:GetTopicAttributes",
+                "sns:ListTagsForResource",
+                "sns:SetTopicAttributes"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor9",
             "Effect": "Allow",
             "Action": [
                 "ssm:AddTagsToResource",
@@ -236,7 +275,9 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ssm:ListTagsForResource",
                 "ssm:PutParameter"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
