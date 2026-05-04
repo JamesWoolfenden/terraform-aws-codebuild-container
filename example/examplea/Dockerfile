@@ -2,7 +2,7 @@
 # checkov:skip=CKV_DOCKER_3:demo code
 # checkov:skip=CKV_DOCKER_7:demo code
 
-FROM hashicorp/terraform
+FROM hashicorp/terraform:1.15.1@sha256:c89ed543266c8756e04791fd68eaa45063c91f802a793c0df6cb522ee435ba2d
 
 RUN apk update && \
     apk add --update \
