@@ -1,5 +1,5 @@
 module "ecr" {
-  source           = "git::https://github.com/jameswoolfenden/terraform-aws-ecr.git?ref=a128d9ef7c74f4c0f5c39d863985206b0e0b9c9a"
+  source = "git::https://github.com/jameswoolfenden/terraform-aws-ecr.git?ref=a128d9ef7c74f4c0f5c39d863985206b0e0b9c9a" #v0.2.93
   name             = var.name
   repositorypolicy = data.aws_iam_policy_document.allowlocals.json
   kms_key          = var.kms_key
