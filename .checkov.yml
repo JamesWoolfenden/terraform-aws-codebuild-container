@@ -6,3 +6,5 @@ external-modules-download-path: .external_modules
 framework:
   - terraform
   - secrets
+skip-check:
+  - CKV_AWS_356  # wildcard resource in pinned external codebuild module policy doc
