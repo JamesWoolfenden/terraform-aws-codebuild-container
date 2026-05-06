@@ -31,3 +31,8 @@ variable "approver_role" {
   type        = string
   description = "Arn of approver role"
 }
+
+variable "logs_bucket" {
+  type        = string
+  description = "Name of bucket to store logs in"
+}

@@ -6,6 +6,7 @@ module "codebuild" {
   force_artifact_destroy = var.force_artifact_destroy
   projectroot            = var.projectroot
   sourcecode             = local.sourcecode
+  logs_bucket= var.logs_bucket
 }
 locals {
   sourcecode = {

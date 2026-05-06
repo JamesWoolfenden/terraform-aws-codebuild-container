@@ -9,4 +9,5 @@ module "container" {
   projectroot            = "example"
   kms_key                = aws_kms_key.codebuild.key_id
   approver_role          = "arn:aws:iam::680235478471:role/approvers"
+  logs_bucket            = "logging-680235478471/codebuild/"
 }
