@@ -4,10 +4,8 @@
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codebuild-container.svg)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-codebuild-container.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-codebuild-container/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-codebuild-container/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-codebuild-container&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-codebuild-container/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-codebuild-container&benchmark=INFRASTRUCTURE+SECURITY)
 
 Terraform module to provision a container pipeline.
 
@@ -31,21 +29,21 @@ No requirements.
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
 
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
-| <a name="module_codebuild"></a> [codebuild](#module\_codebuild) | jameswoolfenden/codebuild/aws | v0.3.1 |
-| <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | jameswoolfenden/codecommit/aws | v0.3.59 |
-| <a name="module_ecr"></a> [ecr](#module\_ecr) | jameswoolfenden/ecr/aws | 0.2.60 |
+| ---- | ------ | ------- |
+| <a name="module_codebuild"></a> [codebuild](#module\_codebuild) | git::https://github.com/jameswoolfenden/terraform-aws-codebuild.git | 249a7f19923cecde22d4130aff74c1630ad87b47 |
+| <a name="module_codecommit"></a> [codecommit](#module\_codecommit) | git::https://github.com/jameswoolfenden/terraform-aws-codecommit.git | e4a7717c615eeb4f674d3919cc6a03317c2f5c3f |
+| <a name="module_ecr"></a> [ecr](#module\_ecr) | git::https://github.com/jameswoolfenden/terraform-aws-ecr.git | a128d9ef7c74f4c0f5c39d863985206b0e0b9c9a |
 
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_policy.additionalneeds](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_role_policy_attachment.lex](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
@@ -56,7 +54,7 @@ No requirements.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_approver_role"></a> [approver\_role](#input\_approver\_role) | Arn of approver role | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | n/a | `map(any)` | n/a | yes |
 | <a name="input_description"></a> [description](#input\_description) | Description of build project | `string` | n/a | yes |
@@ -65,12 +63,12 @@ No requirements.
 | <a name="input_name"></a> [name](#input\_name) | The name of the registry, repository and build | `string` | n/a | yes |
 | <a name="input_otherawsaccount"></a> [otherawsaccount](#input\_otherawsaccount) | n/a | `string` | n/a | yes |
 | <a name="input_projectroot"></a> [projectroot](#input\_projectroot) | The root project name | `string` | n/a | yes |
-| <a name="input_sourcecode"></a> [sourcecode](#input\_sourcecode) | n/a | `map(any)` | <pre>{<br>  "buildspec": "",<br>  "location": "",<br>  "type": "CODECOMMIT"<br>}</pre> | no |
+| <a name="input_sourcecode"></a> [sourcecode](#input\_sourcecode) | n/a | `map(any)` | <pre>{<br/>  "buildspec": "",<br/>  "location": "",<br/>  "type": "CODECOMMIT"<br/>}</pre> | no |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_artifact_bucket"></a> [artifact\_bucket](#output\_artifact\_bucket) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
@@ -307,7 +305,7 @@ Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-
 
 ## Copyrights
 
-Copyright © 2019-2022 James Woolfenden
+Copyright © 2019-2026 James Woolfenden
 
 ## License
 
